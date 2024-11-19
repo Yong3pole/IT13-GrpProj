@@ -14,7 +14,28 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Data exporting was unselected.
+
+-- Dumping database structure for it13db
+CREATE DATABASE IF NOT EXISTS `it13db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `it13db`;
+
+-- Dumping structure for table it13db.users
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int NOT NULL AUTO_INCREMENT,
+  `user_first_name` varchar(50) DEFAULT NULL,
+  `user_last_name` varchar(50) DEFAULT NULL,
+  `user_email` varchar(50) DEFAULT NULL,
+  `user_password` varchar(50) DEFAULT NULL,
+  `user_active` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Dumping data for table it13db.users: ~4 rows (approximately)
+INSERT INTO `users` (`user_id`, `user_first_name`, `user_last_name`, `user_email`, `user_password`, `user_active`) VALUES
+	(1, 'Kirk', 'Tijol', 'kirk@gmail.com', 'kirkivantijol', 1),
+	(2, 'Paulo Prince', 'Medel', 'paulo@gmail.com', 'paulo@gmail.com', 1),
+	(3, 'Leoj', 'Tripole', 'leoj@gmail.com', 'leojtripole', NULL),
+	(4, 'Somerset', 'Siang', 'somerset@gmail.com', 'somersetsiang', 1);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
